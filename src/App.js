@@ -3,13 +3,14 @@ import React from 'react'
 import GlobalStyle from './components/globalStyle/global-style.component'
 
 //pages
-//aboutUs
+import Nav from './Routes/Navigation/nav.component'
 import AboutUs from './pages/about/about-us'
 
 const App = () => {
   return (
     <div>
       <GlobalStyle />
+      <Nav />
       <AboutUs />
     </div>
   )
