@@ -10,12 +10,14 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    background: #1b1b1b
+    background: #1b1b1b;
+    font-family: 'Aboreto', 'Montserrat', sans-serif;
 }
 
 button {
     font-weight: bold;
     font-size: 1.1rem;
+    font-family: 'Lobster Two', 'Montserrat', sans-serif;
     cursor: pointer;
     padding: 1rem 2rem;
     border: 3px solid #23d997;
@@ -42,7 +44,7 @@ h2 {
 
     h4 {
         font-weight: bold;
-        
+        font-size: 2rem;
     }
 
     a{
