@@ -81,7 +81,7 @@ const Services = styled(About)`
     }
 
     p {
-        width: 70%
+        width: 70%;
         padding: 2rem 0rem 4rem 0rem;
     }
 `;
@@ -89,7 +89,7 @@ const Services = styled(About)`
 
 
 const Cards = styled.div`
-    display: flex
+    display: flex;
     flex-wrap: wrap;
     
 `;

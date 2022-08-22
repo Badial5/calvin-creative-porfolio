@@ -11,20 +11,20 @@ color: white;
 `;
  
 export const Description = styled.div`
-  flex: 1;
+   flex: 1;
+  z-index: 2;
   padding-right: 5rem;
-
-  h2{
-    font-weight: bolder;
-    font-size: 250%;
+  h2 {
+    font-weight: lighter;
   }
 
 `;
 
 export const Image = styled.div`
   flex: 1;
+  z-index: 2;
   overflow: hidden;
-  img{
+  img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
