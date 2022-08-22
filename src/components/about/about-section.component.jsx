@@ -8,6 +8,8 @@ import { About, Description, Hide, Image } from "../../styles"
 //Framer Motion
 import {motion} from 'framer-motion';
 
+//
+import { titleAnim, fade, photoAnim } from '../../framer-motion/animation';
 
 
 const AboutSection = () => {
@@ -29,30 +31,31 @@ const AboutSection = () => {
       <Description>
         <motion.div  initial="hidden" animate="show" className="title">
           <Hide>
-              <motion.h2   >We work to make</motion.h2>
+              <motion.h2 variants={titleAnim }  >We work to make</motion.h2>
           </Hide>
 
           <Hide>
-              <motion.h2  >Your <span>dreams</span> come </motion.h2>
+              <motion.h2 variants={titleAnim }  >Your <span>dreams</span> come </motion.h2>
           </Hide>
 
           <Hide>
-              <motion.h2  >true.</motion.h2>
+              <motion.h2  variants={titleAnim } >true.</motion.h2>
           </Hide>
 
         </motion.div>
 
-        <p>Contact us for any Project that you have.
+        <motion.p variants={fade} >Contact us for any Project that you have.
            We have a professionals we will handle it
-            with ease</p>
+            with ease</motion.p>
 
-            <button>Contact Us</button>
+            <motion.button variants={fade}
+             >Contact Us</motion.button>
 
       </Description>
 
-        <Image>
+        <motion.Image variants={photoAnim}>
           <img src={home1} alt="A guy with a camera" />
-        </Image>
+        </motion.Image>
 
     </About>
   )
