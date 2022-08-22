@@ -15,7 +15,7 @@ const OurWork = () => {
       <h2>The Athelete</h2>
       <div className="line"></div>
       
-      <Link to='#' >
+      <Link to='/work/the-athlete' >
       <img src={athlete} alt='athetle' />
       </Link>
 
@@ -23,7 +23,7 @@ const OurWork = () => {
       <h2>The Racer</h2>
       <div className="line"></div>
 
-      <Link to='#'>
+      <Link to='/work/the-racer'>
       <img src={theracer} alt='theracer' />
       </Link>
 
@@ -31,7 +31,7 @@ const OurWork = () => {
       <h2>The Good TImes</h2>
       <div className="line"></div>
 
-      <Link to='#'>
+      <Link to='/work/good-times'>
       <img src={goodtimes} alt='goodtimes' />
       </Link>
 

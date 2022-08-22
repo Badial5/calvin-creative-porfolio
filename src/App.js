@@ -13,6 +13,8 @@ import AboutUs from './pages/about/about-us'
 import ContactUs from './pages/contactUs/contact-us.component'
 import OurWork from './pages/ourWork/our-work.component'
 
+import MovieDetails from './pages/MovieDetails/MovieDetails';
+
 
 const App = () => {
   return (
@@ -26,6 +28,7 @@ const App = () => {
       <Route index  element={<AboutUs />} />
       <Route path='contact' element={<ContactUs />} />
       <Route path='work'  element={<OurWork />} />
+      <Route path='/work/:id' element={<MovieDetails />} />
 
     </Route>
 
@@ -33,6 +36,6 @@ const App = () => {
 
     </div>
   )
-}
+} 
 
 export default App
