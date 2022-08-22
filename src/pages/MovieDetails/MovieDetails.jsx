@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import { useNavigate } from "react-router-dom"
 import { MovieState } from "../../movieState"
 
+//importing Motions 
+
+import {motion} from "framer-motion";
+import { PageAnimation } from '../../framer-motion/animation';
+
+
 
 const MovieDetails = () => {
 
@@ -26,7 +32,9 @@ const MovieDetails = () => {
   return ( 
     <>
     { (movie) && 
-        <Details>
+        <Details exit="exit" variants={PageAnimation}
+         initial="hidden" animate="show"
+         style={{background: "#fff"}}>
         <Headline>{movie.title}
         <img src={movie.mainImg} alt="movie" />
         </Headline>
@@ -55,7 +63,7 @@ const MovieDetails = () => {
 
 //styled component
 
-const Details = styled.div`
+const Details = styled(motion.div)`
 color: white;
     
 `;

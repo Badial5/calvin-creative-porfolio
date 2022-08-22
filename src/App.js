@@ -1,10 +1,13 @@
 import React from 'react'
 //Router 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 
 //Global Style
 import GlobalStyle from './components/globalStyle/global-style.component'
+ 
+//Framer motion
+import {AnimatePresence} from "framer-motion"
 
 //pages
 import Nav from './Routes/Navigation/nav.component'
@@ -17,12 +20,16 @@ import MovieDetails from './pages/MovieDetails/MovieDetails';
 
 
 const App = () => {
+
+  const location = useLocation();
+
+
   return (
     <div>
       <GlobalStyle />
-      
-<Routes>
-
+<AnimatePresence exitBeforeEnter >    
+<Routes location={location} key={location.pathname}>
+  
     <Route path='/' element={<Nav />}>
 
       <Route index  element={<AboutUs />} />
@@ -31,9 +38,9 @@ const App = () => {
       <Route path='/work/:id' element={<MovieDetails />} />
 
     </Route>
-
+  
 </Routes>
-
+</AnimatePresence>
     </div>
   )
 } 
