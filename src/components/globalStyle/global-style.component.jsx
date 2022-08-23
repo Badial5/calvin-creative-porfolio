@@ -9,9 +9,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+
+
+
 body {
     background: #1b1b1b;
     font-family: 'Aboreto', 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 button {

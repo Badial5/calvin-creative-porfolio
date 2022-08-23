@@ -24,7 +24,7 @@ import money from "../../img/money.svg"
 import teamwork from "../../img/teamwork.svg"
 
 // useScroll imported
-import { UseScroll } from "../scroll/UseScroll.component"
+import { useScroll } from "../scroll/UseScroll.component"
 
 
 
@@ -41,7 +41,7 @@ const ServiceSection = () => {
     //     controls.start('hidden')
     // }
 
-    const [element, controls ] = UseScroll();
+    const [element, controls ] = useScroll();
 
   return (
     <Services variants={fade} animate={controls} initial="hidden" ref={element} >

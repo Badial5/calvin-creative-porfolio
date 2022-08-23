@@ -18,6 +18,8 @@ import OurWork from './pages/ourWork/our-work.component'
 
 import MovieDetails from './pages/MovieDetails/MovieDetails';
 
+import ScrollTop from './components/scroll/ScrollTop.component';
+
 
 const App = () => {
 
@@ -26,9 +28,12 @@ const App = () => {
 
   return (
     <div>
-      <GlobalStyle />
-<AnimatePresence exitBeforeEnter >    
-<Routes location={location} key={location.pathname}>
+    <GlobalStyle />
+
+    <ScrollTop /> 
+
+    <AnimatePresence exitBeforeEnter >    
+    <Routes location={location} key={location.pathname}>
   
     <Route path='/' element={<Nav />}>
 

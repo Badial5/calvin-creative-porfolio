@@ -12,14 +12,14 @@ import {About} from "../../styles"
 import Toggle from '../toggle/toggle.component'
 
 
-import { UseScroll } from "../scroll/UseScroll.component"
+import { useScroll } from "../scroll/UseScroll.component"
 
 import { scrollReveal } from "../../framer-motion/animation"
 
 
 const FaqSection = () => {
 
-  const [element, controls] = UseScroll();
+  const [element, controls] = useScroll();
 
   return (
     <Faq variants={scrollReveal} ref={element} animate={controls} initials="hidden" >

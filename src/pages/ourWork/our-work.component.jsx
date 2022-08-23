@@ -13,9 +13,15 @@ import {motion} from "framer-motion";
 import { PageAnimation, fade, photoAnim, lineAnim,
   sliderContainer, slider } from '../../framer-motion/animation';
 
+import { useScroll } from "../../components/scroll/UseScroll.component"
 
 
 const OurWork = () => {
+
+  const [element, controls ] = useScroll();
+  const [element2, controls2 ] = useScroll();
+  
+
   return (
    <Work exit="exit" variants={PageAnimation} 
    initial="hidden" animate="show"
@@ -61,12 +67,20 @@ const OurWork = () => {
 
     </Movie>
 
+    
   
   </Work>
 
     
   )
 }
+
+
+
+
+
+
+// Styled Components
 
 
 const Work = styled(motion.div)`
@@ -79,7 +93,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line{
     height: 0.5rem;
