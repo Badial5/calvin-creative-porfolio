@@ -10,7 +10,13 @@ const GlobalStyle = createGlobalStyle`
 }
 
 
+html {
+    @media (max-width: 1500px){
+        font-size: 75%;
+    }
 
+    
+}
 
 body {
     background: #1b1b1b;
