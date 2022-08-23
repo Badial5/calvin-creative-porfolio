@@ -13,15 +13,38 @@ import home2 from "../../img/home2.png"
 import { About, Description, Image } from "../../styles"
 
 
+// import { useInView } from 'react-intersection-observer';
+// import { useAnimation } from 'framer-motion'
+import { fade } from "../../framer-motion/animation"
+
 //import icons
 import clock from "../../img/clock.svg"
 import diaphragm from "../../img/diaphragm.svg"
 import money from "../../img/money.svg"
 import teamwork from "../../img/teamwork.svg"
 
+// useScroll imported
+import { UseScroll } from "../scroll/UseScroll.component"
+
+
+
+
 const ServiceSection = () => {
+
+    // const controls = useAnimation(); 
+
+    // const [element, view] = useInView({threshold: 0.5});
+
+    // if(view) {
+    //     controls.start('show')
+    // } else {
+    //     controls.start('hidden')
+    // }
+
+    const [element, controls ] = UseScroll();
+
   return (
-    <Services >
+    <Services variants={fade} animate={controls} initial="hidden" ref={element} >
       <Description>
         <h2>High <span>quality</span> services</h2>
         <Cards>

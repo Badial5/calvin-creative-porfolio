@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 
 //Styles component
 import styled from 'styled-components'
@@ -11,10 +11,18 @@ import {About} from "../../styles"
 
 import Toggle from '../toggle/toggle.component'
 
+
+import { UseScroll } from "../scroll/UseScroll.component"
+
+import { scrollReveal } from "../../framer-motion/animation"
+
+
 const FaqSection = () => {
 
+  const [element, controls] = UseScroll();
+
   return (
-    <Faq>
+    <Faq variants={scrollReveal} ref={element} animate={controls} initials="hidden" >
       <h2>Any Questions <span>FAQ</span></h2>
     
 <AnimateSharedLayout>

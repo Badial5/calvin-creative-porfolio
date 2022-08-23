@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion"
 
 export const About = styled.div`
 min-height: 90vh;
@@ -10,7 +10,7 @@ padding: 5rem 10rem;
 color: white;
 `;
  
-export const Description = styled.div`
+export const Description = styled(motion.div)`
    flex: 1;
   z-index: 2;
   padding-right: 5rem;
